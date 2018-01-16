@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carregando o DOM</title>
+    <!-- CDN -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <!-- Local -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            alert('DOM carregado 1!');            
+        });
+
+        $(function() {
+            alert('DOM carregado 2!')
+        });
+
+        $(window).on('load',function(){
+            alert('Elemento Carregado');
+        });
+    </script>
+    <title>Aula 1</title>
+</head>
+<body>    
+    <img src="https://cdn-02.independent.ie/regionals/newrossstandard/lifestyle/article34929884.ece/7e8aa/AUTOCROP/h342/2016-08-02_wex_23347603_I1.JPG">
+</body>
+</html>

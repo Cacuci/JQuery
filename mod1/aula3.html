@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt=BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <title>Seletores Hierarquicos</title>
+    <script>
+        $(document).ready(function() {
+
+            //Seletores Hirarquicos
+            // $('h2').css('margin', '0');
+            // $('p').css({margin: '0', color: 'blue'});
+            // $('.div1').css({'margin-bottom': '40px', background: '#ccc'});
+
+            //FILHAS
+            //Atua somene no span
+            $('.div1 span').hide().delay('4000').fadeIn('1000').css({color: 'green', 'font-size': '20px'});
+            //Atua somente no h2
+            $('.div1 h2').hide().css({'font-size': '50px', color: 'red'}).fadeIn(6000);
+
+            //Atua em TODAS Filhas diretas da classe .div1
+            $('.div1 > span').css('color', 'orange');
+
+            //Atua somente no Primeiro Elemento Após o selecionado, nesse caso, atua somente no 1º elemento apos o .p1
+            $('.p1 + p').css({'font-size': '25px'});
+
+            //Atua em Todos Elementos Após o selecionado, nesse caso, atua em todos os elementos apos o .p1
+            $('.p1 ~ p').css({color: 'black'}).hide().delay('2000').fadeIn('2000');
+        })
+    </script>
+    <title>Aula 2</title>
+</head>
+<body>
+    <div class="div1">
+        <h2>H2 filho de DIV1</h2>
+        <p>P filho de DIV1<span>SPAN filho de P</span></p>
+        <span>Fiho direto de DIV1</span>        
+    </div>
+    <h2>H2 fora da DIV1</h2>
+    <p class="p1">P1 fora da DIV1</p>
+    <p>P2 fora da DIV1</p>
+    <p>P3 fora da DIV1</p>
+</body>
+</html>

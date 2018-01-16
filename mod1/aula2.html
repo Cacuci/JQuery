@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt=BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <title>Multiplos Atributos</title>
+    <script>
+        $(document).ready(function() {
+
+            // $('h1').css("color", "orange")                        
+            // $('h1').hide();
+            // $('h1').delay('1000');
+            // $('h1').fadeIn('slow');
+
+            //Funçao Encadeada (Inline)
+            // $('h1').css("color", "orange").hide().delay('1000').fadeIn('Slow');
+
+            // //Funcao Encadeada (InBlock)
+            // $('h1')
+            //     .css("color", "orange")
+            //     .hide()
+            //     .delay('1000')
+            //     .fadeIn('Slow')
+            //     .click(function() {
+            //         $('Body').css("background","red")
+            //         $('h1').css("color","white");
+            //     });
+            
+            //Insercao de multiplos atributos css
+            $('a').css({color:'red', display:'block'});
+            $('#link2').css("color", "black");
+            $('.link3').css("color", "blue");
+            $('*').css("padding","10px");
+            $('h1, .link3').css("border-bottom", "solid 3px blue");
+
+        })
+    </script>
+    <title>Aula 2</title>
+</head>
+<body>
+    <h1>Aula 1</h1>
+
+    <a id="link1" href="#">Link 1</a>
+    <a id="link2" href="#">Link 2</a>
+    <a class="link3" href="#">Link 3</a>
+</body>
+</html>
